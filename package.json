@@ -1,6 +1,6 @@
 {
 	"name": "vue-dark-switch",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "开箱即用的 vue3 暗黑模式开关组件",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
