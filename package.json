@@ -44,7 +44,7 @@
 		"@vueuse/core": "^8.3.1",
 		"bumpp": "^7.1.1",
 		"naive-ui": "^2.28.2",
-		"unocss": "^0.31.14",
+		"unocss": "^0.31.15",
 		"vite": "^2.9.5",
 		"vite-plugin-dts": "^1.1.1",
 		"vue": "^3.2.33"
