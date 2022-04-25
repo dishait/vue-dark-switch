@@ -2,13 +2,13 @@
 	"name": "vue-dark-switch",
 	"version": "0.0.4",
 	"description": "开箱即用的 vue3 暗黑模式开关组件",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
+	"main": "./dist/index.umd.js",
+	"module": "./dist/index.es.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-			"require": "./dist/index.js",
-			"import": "./dist/index.mjs",
+			"require": "./dist/index.umd.js",
+			"import": "./dist/index.es.js",
 			"types": "./dist/index.d.ts"
 		}
 	},
@@ -45,7 +45,8 @@
 		"bumpp": "^7.1.1",
 		"naive-ui": "^2.28.2",
 		"unocss": "^0.31.14",
-		"vite": "^2.9.5"
+		"vite": "^2.9.5",
+		"vite-plugin-dts": "^1.1.1"
 	},
 	"dependencies": {
 		"vue": "^3.2.33"

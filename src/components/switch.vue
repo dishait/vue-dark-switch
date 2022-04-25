@@ -5,6 +5,10 @@ import {
 	WbSunnyOutlined,
 	DarkModeOutlined
 } from '@vicons/material'
+import {
+	createStyleOnceInHead,
+	createScriptOnceInHead
+} from '../composables/head'
 
 defineProps({
 	round: {
@@ -20,6 +24,26 @@ const railStyle = ({ checked }) => {
 			: ''
 	}
 }
+
+createStyleOnceInHead(`html {
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
+}
+
+html.dark {
+	color: #e5e7eb;
+	background-color: #22272e;
+}`)
+
+createScriptOnceInHead(`;(function () {
+				const prefersDark =
+					window.matchMedia &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches
+			const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+			if (setting === 'dark' || (prefersDark && setting !== 'light'))
+			document.documentElement.classList.toggle('dark', true)
+})()`)
 </script>
 
 <template>
