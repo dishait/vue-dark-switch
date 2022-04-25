@@ -1,6 +1,6 @@
-# dark-switch
+# vue-dark-switch
 
-开箱即用的暗黑模式开关组件
+开箱即用的 vue3 暗黑模式开关组件
 
 <br />
 <br />
