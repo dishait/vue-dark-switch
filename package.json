@@ -4,12 +4,12 @@
 	"description": "开箱即用的 vue3 暗黑模式开关组件",
 	"main": "./dist/index.umd.js",
 	"module": "./dist/index.es.js",
-	"types": "./dist/index.d.ts",
+	"types": "./dist/exports.d.ts",
 	"exports": {
 		".": {
 			"require": "./dist/index.umd.js",
 			"import": "./dist/index.es.js",
-			"types": "./dist/index.d.ts"
+			"types": "./dist/exports.d.ts"
 		}
 	},
 	"files": [
@@ -18,8 +18,8 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview",
 		"prepublishOnly": "npm run build",
+		"play": "pnpm -C examples/vite-project run dev",
 		"release": "bumpp --commit --push --tag && npm publish"
 	},
 	"repository": {
