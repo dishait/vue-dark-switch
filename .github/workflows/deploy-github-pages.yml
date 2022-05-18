@@ -19,6 +19,9 @@ jobs:
           node-version: 16
           cache: "pnpm"
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+    
       - name: Install deps
         run: pnpm install
 
