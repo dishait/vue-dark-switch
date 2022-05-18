@@ -20,6 +20,7 @@
 		"build": "vite build",
 		"prepublishOnly": "npm run build",
 		"play": "pnpm -C examples/vite-project run dev",
+		"play:build": "pnpm -C examples/vite-project run build",
 		"release": "bumpp --commit --push --tag && npm publish"
 	},
 	"repository": {
