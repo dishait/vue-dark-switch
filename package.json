@@ -24,7 +24,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/markthree/repo.git"
+		"url": "https://github.com/dishait/vue-dark-switch.git"
 	},
 	"keywords": [
 		"switch",
@@ -38,14 +38,14 @@
 		"url": "https://github.com/markthree"
 	},
 	"devDependencies": {
-		"@types/node": "^17.0.26",
+		"@types/node": "^17.0.34",
 		"@vicons/material": "^0.12.0",
-		"@vitejs/plugin-vue": "^2.3.1",
-		"@vueuse/core": "^8.3.1",
+		"@vitejs/plugin-vue": "^2.3.3",
+		"@vueuse/core": "^8.5.0",
 		"bumpp": "^7.1.1",
-		"naive-ui": "^2.28.2",
-		"unocss": "^0.31.15",
-		"vite": "^2.9.5",
+		"naive-ui": "^2.29.0",
+		"unocss": "^0.31.17",
+		"vite": "^2.9.9",
 		"vite-plugin-dts": "^1.1.1",
 		"vue": "^3.2.33"
 	},
