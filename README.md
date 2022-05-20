@@ -51,7 +51,7 @@ npm i vue-dark-switch -D
 ### 手动
 
 ```ts
-import { isDark, toggleDark } from 'vue-dark-theme'
+import { isDark, toggleDark } from 'vue-dark-switch'
 
 isDark.value // 是否是暗黑模式
 
@@ -92,6 +92,14 @@ toggleDark() // 切换模式
 - [naive-ui](https://www.naiveui.com/zh-CN)
 - [vueuse](https://vueuse.org/)
 - [unocss](https://github.com/unocss/unocss)
+
+<br />
+<br />
+
+
+# Support
+
+该组件由 [vue3-exports](https://github.com/dishait/vue3-exports) 提供支持
 
 <br />
 <br />
