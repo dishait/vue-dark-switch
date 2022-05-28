@@ -17,10 +17,11 @@
 	],
 	"scripts": {
 		"dev": "vite",
+		"build-js": "vite build",
 		"prepublishOnly": "npm run build",
-		"build": "vite build && pnpm build-types",
 		"build-types": "vue-tsc -p tsconfig.build.json",
 		"play": "pnpm -C examples/vite-project run dev",
+		"build": "npm-run-all --parallel build-js build-types",
 		"play:build": "pnpm -C examples/vite-project run build",
 		"play:preview": "pnpm -C examples/vite-project run preview",
 		"release": "bumpp --commit --push --tag && npm publish"
@@ -47,6 +48,7 @@
 		"@vueuse/core": "^8.5.0",
 		"bumpp": "^7.1.1",
 		"naive-ui": "^2.29.0",
+		"npm-run-all": "^4.1.5",
 		"typescript": "^4.6.4",
 		"unocss": "^0.31.17",
 		"vite": "^2.9.9",
