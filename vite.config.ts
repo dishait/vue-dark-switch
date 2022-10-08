@@ -17,7 +17,8 @@ export default defineConfig({
 					vue: 'Vue'
 				}
 			}
-		}
+		},
+		cssCodeSplit: true
 	},
 	plugins: [Vue(), Unocss()]
 })
