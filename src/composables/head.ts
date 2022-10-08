@@ -1,19 +1,17 @@
-let onceScriptFlag = false
-export const createScriptOnceInHead = (content: string) => {
-	if (!onceScriptFlag) {
+import { createSharedComposable } from '@vueuse/core'
+
+export const createGlobalScript = createSharedComposable(
+	(content: string) => {
 		const script = window.document.createElement('script')
 		script.append(content)
 		window.document.head.append(script)
-		onceScriptFlag = true
 	}
-}
+)
 
-let onceStyleFlag = false
-export const createStyleOnceInHead = (content: string) => {
-	if (!onceStyleFlag) {
+export const createGlobalStyle = createSharedComposable(
+	(content: string) => {
 		const script = window.document.createElement('style')
 		script.append(content)
 		window.document.head.append(script)
-		onceStyleFlag = true
 	}
-}
+)

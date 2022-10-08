@@ -1,61 +1,61 @@
 {
-	"name": "vue-dark-switch",
-	"version": "0.1.4",
-	"description": "多合一的开箱即用 vue3 暗黑模式开关组件",
-	"main": "./dist/index.umd.js",
-	"module": "./dist/index.es.js",
-	"types": "./dist/exports.d.ts",
-	"exports": {
-		".": {
-			"require": "./dist/index.umd.js",
-			"import": "./dist/index.es.js",
-			"types": "./dist/exports.d.ts"
-		}
-	},
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"dev": "vite",
-		"build-js": "vite build",
-		"prepublishOnly": "npm run build",
-		"build-types": "vue-tsc -p tsconfig.build.json",
-		"play": "pnpm -C examples/vite-project run dev",
-		"build": "npm-run-all --parallel build-js build-types",
-		"play:build": "pnpm -C examples/vite-project run build",
-		"play:preview": "pnpm -C examples/vite-project run preview",
-		"release": "bumpp --commit --push --tag && npm publish"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dishait/vue-dark-switch.git"
-	},
-	"keywords": [
-		"switch",
-		"dark",
-		"theme"
-	],
-	"license": "MIT",
-	"author": {
-		"name": "markthree",
-		"email": "1801982702@qq.com",
-		"url": "https://github.com/markthree"
-	},
-	"devDependencies": {
-		"@types/node": "^17.0.34",
-		"@vicons/material": "^0.12.0",
-		"@vitejs/plugin-vue": "^2.3.3",
-		"@vueuse/core": "^8.5.0",
-		"bumpp": "^7.1.1",
-		"naive-ui": "^2.29.0",
-		"npm-run-all": "^4.1.5",
-		"typescript": "^4.6.4",
-		"unocss": "^0.31.17",
-		"vite": "^2.9.9",
-		"vue": "^3.2.33",
-		"vue-tsc": "^0.34.15"
-	},
-	"peerDependencies": {
-		"vue": ">=3.0.0"
-	}
+  "name": "vue-dark-switch",
+  "version": "0.1.4",
+  "description": "多合一的开箱即用 vue3 暗黑模式开关组件",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/exports.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.umd.js",
+      "import": "./dist/index.es.js",
+      "types": "./dist/exports.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build-js": "vite build",
+    "prepublishOnly": "npm run build",
+    "build-types": "vue-tsc -p tsconfig.build.json",
+    "play": "pnpm -C examples/vite-project run dev",
+    "build": "npm-run-all --parallel build-js build-types",
+    "play:build": "pnpm -C examples/vite-project run build",
+    "play:preview": "pnpm -C examples/vite-project run preview",
+    "release": "bumpp --commit --push --tag && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dishait/vue-dark-switch.git"
+  },
+  "keywords": [
+    "switch",
+    "dark",
+    "theme"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "markthree",
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/markthree"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.3",
+    "@vicons/material": "^0.12.0",
+    "@vitejs/plugin-vue": "^3.1.2",
+    "@vueuse/core": "^9.3.0",
+    "bumpp": "^8.2.1",
+    "naive-ui": "^2.33.4",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.8.4",
+    "unocss": "^0.45.28",
+    "vite": "^3.1.6",
+    "vue": "^3.2.40",
+    "vue-tsc": "^1.0.0"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  }
 }
