@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { NSwitch, NIcon } from 'naive-ui'
 import { isDark } from '../composables/theme'
-import WbSunnyOutlined from '@vicons/material/es/WbSunnyOutlined'
-import DarkModeOutlined from '@vicons/material/es/DarkModeOutlined'
+import {
+	WbSunnyOutlined,
+	DarkModeOutlined
+} from '@vicons/material'
+
 import {
 	mountStyle,
 	mountScript
