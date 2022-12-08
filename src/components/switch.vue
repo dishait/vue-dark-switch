@@ -51,10 +51,14 @@ const railStyle = ({ checked }) => {
 		v-model:value="isDark"
 	>
 		<template #checked-icon>
-			<n-icon :component="DarkModeOutlined" />
+			<n-icon>
+				<DarkModeOutlined />
+			</n-icon>
 		</template>
 		<template #unchecked-icon>
-			<n-icon :component="WbSunnyOutlined" />
+			<n-icon>
+				<WbSunnyOutlined />
+			</n-icon>
 		</template>
 	</n-switch>
 </template>
