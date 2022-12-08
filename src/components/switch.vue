@@ -6,11 +6,11 @@ import {
 	DarkModeOutlined
 } from '@vicons/material'
 import {
-	createGlobalScript,
-	createGlobalStyle
-} from '../composables/head'
+	mountStyle,
+	mountScript
+} from '../composables/mount'
 
-createGlobalStyle(`html {
+mountStyle(`html {
 	transition-duration: 250ms;
 	transition-property: background-color;
 	transition-timing-function: ease-in-out;
@@ -21,7 +21,7 @@ html.dark {
 	background-color: #22272e;
 }`)
 
-createGlobalScript(`;(function () {
+mountScript(`;(function () {
 				const prefersDark =
 					window.matchMedia &&
 					window.matchMedia('(prefers-color-scheme: dark)').matches
