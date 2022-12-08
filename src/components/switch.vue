@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { NSwitch, NIcon } from 'naive-ui'
 import { isDark } from '../composables/theme'
-import Sun from '../icons/sun.svg'
-import Moon from '../icons/moon.svg'
+
 import {
 	mountStyle,
 	mountScript
