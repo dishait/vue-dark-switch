@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { NSwitch, NIcon } from 'naive-ui'
 import { isDark } from '../composables/theme'
-import {
-	WbSunnyOutlined,
-	DarkModeOutlined
-} from '@vicons/material'
+import Sun from '../icons/sun.svg'
+import Moon from '../icons/moon.svg'
 import {
 	mountStyle,
 	mountScript
@@ -53,10 +51,16 @@ const railStyle = ({ checked }) => {
 		v-model:value="isDark"
 	>
 		<template #checked-icon>
-			<n-icon :component="DarkModeOutlined" />
+			<n-icon>
+				<div
+					class="i-line-md:sunny-outline-to-moon-transition"
+				/>
+			</n-icon>
 		</template>
 		<template #unchecked-icon>
-			<n-icon :component="WbSunnyOutlined" />
+			<n-icon>
+				<div class="i-line-md:sunny-outline" />
+			</n-icon>
 		</template>
 	</n-switch>
 </template>

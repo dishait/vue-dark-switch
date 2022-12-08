@@ -1,4 +1,5 @@
 import Unocss from 'unocss/vite'
+import { presetIcons, presetUno } from 'unocss'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 
@@ -20,5 +21,10 @@ export default defineConfig({
 		},
 		cssCodeSplit: true
 	},
-	plugins: [Vue(), Unocss()]
+	plugins: [
+		Vue(),
+		Unocss({
+			presets: [presetUno(), presetIcons()]
+		})
+	]
 })
