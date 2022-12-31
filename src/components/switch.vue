@@ -1,32 +1,11 @@
 <script setup lang="ts">
 import { NSwitch, NIcon } from 'naive-ui'
 import { isDark } from '../composables/theme'
+import { mountPresets } from '../composables/mount'
 import WbSunnyOutlined from '@vicons/material/es/WbSunnyOutlined'
 import DarkModeOutlined from '@vicons/material/es/DarkModeOutlined'
-import {
-	mountStyle,
-	mountScript
-} from '../composables/mount'
 
-mountStyle(`html {
-	transition-duration: 250ms;
-	transition-property: background-color;
-	transition-timing-function: ease-in-out;
-}
-
-html.dark {
-	color: #e5e7eb;
-	background-color: #22272e;
-}`)
-
-mountScript(`;(function () {
-				const prefersDark =
-					window.matchMedia &&
-					window.matchMedia('(prefers-color-scheme: dark)').matches
-			const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
-			if (setting === 'dark' || (prefersDark && setting !== 'light'))
-			document.documentElement.classList.toggle('dark', true)
-})()`)
+mountPresets()
 
 defineProps({
 	round: {
@@ -48,8 +27,7 @@ const railStyle = ({ checked }) => {
 	<n-switch
 		:round="round"
 		:rail-style="railStyle"
-		v-model:value="isDark"
-	>
+		v-model:value="isDark">
 		<template #checked-icon>
 			<n-icon>
 				<DarkModeOutlined />

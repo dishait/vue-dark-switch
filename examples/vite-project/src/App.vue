@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { Switch } from 'vue-dark-switch'
+import { SwitchIcon } from 'vue-dark-switch'
 </script>
 
 <template>
-	<Switch />
+	<SwitchIcon />
 </template>
 
 <style>

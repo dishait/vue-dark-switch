@@ -16,3 +16,25 @@ export const mountScript = createSharedComposable(
 export const mountStyle = createSharedComposable(
 	(content: string) => mount('style', content)
 )
+
+export function mountPresets() {
+	mountStyle(`html {
+		transition-duration: 250ms;
+		transition-property: background-color;
+		transition-timing-function: ease-in-out;
+	}
+	
+	html.dark {
+		color: #e5e7eb;
+		background-color: #22272e;
+	}`)
+
+	mountScript(`;(function () {
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches
+				const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+				if (setting === 'dark' || (prefersDark && setting !== 'light'))
+				document.documentElement.classList.toggle('dark', true)
+	})()`)
+}
