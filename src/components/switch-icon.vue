@@ -39,7 +39,7 @@ withDefaults(defineProps<{ size?: string }>(), {
 
 .rotate-enter-from {
 	opacity: 0;
-	transform: rotate(-180deg);
+	transform: rotate(270deg);
 }
 
 .rotate-leave-to {
