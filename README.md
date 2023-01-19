@@ -46,6 +46,19 @@ npm i vue-dark-switch -D
 </template>
 ```
 
+#### 纯图标
+
+```html
+<script>
+	import { SwitchIcon } from 'vue-dark-switch'
+	import 'vue-dark-switch/dist/style.css'
+</script>
+
+<template>
+	<SwitchIcon />
+</template>
+```
+
 <br />
 
 ### 手动
@@ -95,7 +108,6 @@ toggleDark() // 切换模式
 
 <br />
 <br />
-
 
 # Support
 
