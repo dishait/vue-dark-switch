@@ -1,15 +1,24 @@
 <script setup lang="ts">
 import { NIcon } from 'naive-ui'
-import { isDark, toggleDark } from '../composables/theme'
 import { mountPresets } from '../composables/mount'
+import { isDark, toggleDark } from '../composables/theme'
 import WbSunnyOutlined from '@vicons/material/es/WbSunnyOutlined'
 import DarkModeOutlined from '@vicons/material/es/DarkModeOutlined'
 
-mountPresets()
+const props = withDefaults(
+	defineProps<{
+		size?: string
+		unmountPersets?: boolean
+	}>(),
+	{
+		size: '20px',
+		unmountPersets: false
+	}
+)
 
-withDefaults(defineProps<{ size?: string }>(), {
-	size: '20px'
-})
+if (!props.unmountPersets) {
+	mountPresets()
+}
 </script>
 
 <template>

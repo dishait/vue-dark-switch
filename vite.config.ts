@@ -19,5 +19,16 @@ export default defineConfig({
 			}
 		}
 	},
-	plugins: [Vue(), Unocss()]
+	plugins: [
+		Vue(),
+		Unocss(),
+		{
+			name: 'copy-polyfill',
+			apply: 'build',
+			async buildEnd() {
+				const { default: cpy } = await import('cpy')
+				cpy('src/polyfill/**/*', 'dist/polyfill')
+			}
+		}
+	]
 })

@@ -5,14 +5,20 @@ import { mountPresets } from '../composables/mount'
 import WbSunnyOutlined from '@vicons/material/es/WbSunnyOutlined'
 import DarkModeOutlined from '@vicons/material/es/DarkModeOutlined'
 
-mountPresets()
-
-defineProps({
-	round: {
-		type: Boolean,
-		default: false
+const props = withDefaults(
+	defineProps<{
+		round?: boolean
+		unmountPersets?: boolean
+	}>(),
+	{
+		round: false,
+		unmountPersets: false
 	}
-})
+)
+
+if (!props.unmountPersets) {
+	mountPresets()
+}
 
 const railStyle = ({ checked }) => {
 	return {

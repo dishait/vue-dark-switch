@@ -1,0 +1,10 @@
+html {
+	transition-duration: 250ms;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
+}
+
+html.dark {
+	color: #e5e7eb;
+	background-color: #22272e;
+}
