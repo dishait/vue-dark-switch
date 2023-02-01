@@ -16,15 +16,17 @@ export function HtmlPolyfill(): Plugin {
 			async handler(html) {
 				const [js, css] = await Promise.all([
 					readFile(
-						resolve(_dirname, './polyfill/global.js')
+						resolve(_dirname, './polyfill/global.js'),
+						'utf-8'
 					),
 					readFile(
-						resolve(_dirname, './polyfill/global.css')
+						resolve(_dirname, './polyfill/global.css'),
+						'utf-8'
 					)
 				])
 
-				html.replace(
-					'</head>',
+				return html.replace(
+					/<\/head>/,
 					`<style>${css}</style>
                     <script>${js}</script></head>`
 				)

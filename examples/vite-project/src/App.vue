@@ -4,8 +4,8 @@ import 'vue-dark-switch/dist/style.css'
 </script>
 
 <template>
-	<Switch class="mr-3" />
-	<SwitchIcon />
+	<Switch class="mr-3" :unmount-persets="true" />
+	<SwitchIcon :unmount-persets="true" />
 </template>
 
 <style>
