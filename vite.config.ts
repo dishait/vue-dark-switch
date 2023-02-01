@@ -1,6 +1,7 @@
 import Unocss from 'unocss/vite'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import { builtinModules } from 'module'
 
 export default defineConfig({
 	build: {
@@ -15,7 +16,11 @@ export default defineConfig({
 			entry: ['./src/exports.ts', './src/vite.ts']
 		},
 		rollupOptions: {
-			external: ['vue'],
+			external: [
+				'vue',
+				...builtinModules,
+				...builtinModules.map(m => `node:${m}`)
+			],
 			output: {
 				globals: {
 					vue: 'Vue'
