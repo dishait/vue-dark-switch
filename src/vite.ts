@@ -1,6 +1,12 @@
 import type { Plugin } from 'vite'
+import { fileURLToPath } from 'node:url'
 import { readFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
+import { dirname, resolve } from 'node:path'
+
+const _dirname =
+	typeof __dirname !== 'undefined'
+		? __dirname
+		: dirname(fileURLToPath(import.meta.url))
 
 export function HtmlPolyfill(): Plugin {
 	return {
@@ -10,10 +16,10 @@ export function HtmlPolyfill(): Plugin {
 			async handler(html) {
 				const [js, css] = await Promise.all([
 					readFile(
-						resolve(__dirname, './polyfill/global.js')
+						resolve(_dirname, './polyfill/global.js')
 					),
 					readFile(
-						resolve(__dirname, './polyfill/global.css')
+						resolve(_dirname, './polyfill/global.css')
 					)
 				])
 
