@@ -7,8 +7,12 @@ export default defineConfig({
 		emptyOutDir: false,
 		lib: {
 			name: 'vue-dark-switch',
-			entry: './src/exports.ts',
-			fileName: f => `index.${f}.js`
+			formats: ['cjs', 'es'],
+			fileName(f, e) {
+				const ext = f === 'es' ? 'mjs' : f
+				return `${e}.${ext}`
+			},
+			entry: ['./src/exports.ts', './src/vite.ts']
 		},
 		rollupOptions: {
 			external: ['vue'],
