@@ -95,6 +95,35 @@ toggleDark() // 切换模式
 ```
 
 <br />
+
+## 编译时预设 - 推荐
+
+避免复杂场景下首次启动白屏，性能更好
+
+```html
+<script>
+	import { Switch } from 'vue-dark-switch'
+</script>
+
+<template>
+	<!-- unmount-persets 关闭运行时预设 -->
+	<Switch :unmount-persets="true" />
+</template>
+```
+
+```ts
+// vite.config.js
+import { defineConfig } from 'vite'
+import { HtmlPolyfill } from 'vue-dark-switch/vite'
+
+export default defineConfig({
+	plugins: [
+		HtmlPolyfill() // 注入编译时预设
+	]
+})
+```
+
+<br />
 <br />
 
 # Refs
