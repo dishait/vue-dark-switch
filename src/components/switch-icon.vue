@@ -28,14 +28,18 @@ if (!props.unmountPersets) {
 			:size="size"
 			class="cursor-pointer flex items-center"
 			@click="toggleDark(false)">
-			<DarkModeOutlined />
+			<slot name="dark">
+			     <DarkModeOutlined />
+			</slot>
 		</n-icon>
 		<n-icon
 			v-else
 			:size="size"
 			class="cursor-pointer flex items-center"
 			@click="toggleDark(true)">
-			<WbSunnyOutlined />
+			<slot name="light">
+			     <WbSunnyOutlined />
+			</slot>
 		</n-icon>
 	</Transition>
 </template>
