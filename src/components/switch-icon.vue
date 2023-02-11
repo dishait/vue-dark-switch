@@ -23,22 +23,14 @@ if (!props.unmountPersets) {
 
 <template>
 	<Transition name="rotate" mode="out-in">
-		<n-icon
-			v-if="isDark"
-			:size="size"
-			class="cursor-pointer flex items-center"
-			@click="toggleDark(false)">
+		<n-icon v-if="isDark" :size="size" class="cursor-pointer flex items-center" @click="toggleDark(false)">
 			<slot name="dark">
-			     <DarkModeOutlined />
+				<DarkModeOutlined />
 			</slot>
 		</n-icon>
-		<n-icon
-			v-else
-			:size="size"
-			class="cursor-pointer flex items-center"
-			@click="toggleDark(true)">
+		<n-icon v-else :size="size" class="cursor-pointer flex items-center" @click="toggleDark(true)">
 			<slot name="light">
-			     <WbSunnyOutlined />
+				<WbSunnyOutlined />
 			</slot>
 		</n-icon>
 	</Transition>

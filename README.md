@@ -29,7 +29,7 @@
 ### 安装
 
 ```shell
-npm i vue-dark-switch -D
+npm i vue-dark-switch
 ```
 
 <br />
@@ -37,8 +37,8 @@ npm i vue-dark-switch -D
 ### 基础
 
 ```html
-<script>
-	import { Switch } from 'vue-dark-switch'
+<script setup>
+import { Switch } from 'vue-dark-switch'
 </script>
 
 <template>
@@ -46,10 +46,37 @@ npm i vue-dark-switch -D
 </template>
 ```
 
+支持自定义 `Switch` 背景色
+
+```html
+<template>
+	<Switch darkBackground="#fff" lightBackground="#2D2D2D"/>
+</template>
+```
+
+```html
+<script setup>
+import { Switch } from 'vue-dark-switch'
+import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
+import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
+</script>
+
+<template>
+	<Switch>
+		<template #dark>
+			<WorkspacePremiumOutlined />
+		</template>
+		<template #light>
+			<WorkspacePremiumTwotone />
+		</template>
+	</Switch>
+</template>
+```
+
 #### 纯图标
 
 ```html
-<script>
+<script setup>
 	import { SwitchIcon } from 'vue-dark-switch'
 	import 'vue-dark-switch/dist/style.css'
 </script>
@@ -59,20 +86,42 @@ npm i vue-dark-switch -D
 </template>
 ```
 
+自定义图标
+
+```html
+<script setup>
+import { SwitchIcon } from 'vue-dark-switch'
+import 'vue-dark-switch/dist/style.css'
+import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
+import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
+</script>
+
+<template>
+	<SwitchIcon>
+		<template #dark>
+			<WorkspacePremiumOutlined />
+		</template>
+		<template #light>
+			<WorkspacePremiumTwotone />
+		</template>
+	</SwitchIcon>
+</template>
+```
+
 <br />
 
 ### 手动
 
 ```ts
-import { isDark, toggleDark } from 'vue-dark-switch'
+import { isDark, toggleDark } from "vue-dark-switch";
 
-isDark.value // 是否是暗黑模式
+isDark.value; // 是否是暗黑模式
 
-toggleDark(false) // 取消暗黑模式
+toggleDark(false); // 取消暗黑模式
 
-toggleDark(true) // 开启暗黑模式
+toggleDark(true); // 开启暗黑模式
 
-toggleDark() // 切换模式
+toggleDark(); // 切换模式
 ```
 
 <br />
@@ -82,9 +131,9 @@ toggleDark() // 切换模式
 ```html
 <!-- App.vue -->
 <script setup>
-	import { NConfigProvider } from 'naive-ui'
+import { NConfigProvider } from 'naive-ui'
 
-	import { naiveTheme } from 'vue-dark-switch'
+import { naiveTheme } from 'vue-dark-switch'
 </script>
 
 <template>
@@ -101,8 +150,8 @@ toggleDark() // 切换模式
 避免复杂场景下首次启动白屏，性能更好
 
 ```html
-<script>
-	import { Switch } from 'vue-dark-switch'
+<script setup>
+import { Switch } from 'vue-dark-switch'
 </script>
 
 <template>
@@ -113,75 +162,15 @@ toggleDark() // 切换模式
 
 ```ts
 // vite.config.js
-import { defineConfig } from 'vite'
-import { HtmlPolyfill } from 'vue-dark-switch/vite'
+import { defineConfig } from "vite";
+import { HtmlPolyfill } from "vue-dark-switch/vite";
 
 export default defineConfig({
-	plugins: [
-		HtmlPolyfill() // 注入编译时预设
-	]
-})
+  plugins: [
+    HtmlPolyfill(), // 注入编译时预设
+  ],
+});
 ```
-
-<br />
-<br />
-
-# 扩展 -自定义
-
-- 支持自定义switch切换图标插槽
-
-  ```html
-  <script>
-  	import { Switch } from 'vue-dark-switch'
-      import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
-      import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
-  </script>
-  
-  <template>
-    <Switch>
-  	<template #dark>
-  		<WorkspacePremiumOutlined />
-  	</template>
-  	<template #light>
-  		<WorkspacePremiumTwotone />
-  	</template>
-    </Switch>
-  </template>
-  ```
-
-- 支持自定义switch背景
-
-  ```html
-  <template>
-  <Switch darkBackground="#fff" lightBackground="#2D2D2D"/>
-  </template>
-  ```
-
-- 自定义`SwitchIcon`图标
-
-  ```html
-  <script>
-  	import { SwitchIcon } from 'vue-dark-switch'
-  	import 'vue-dark-switch/dist/style.css'
-      import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
-      import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
-  </script>
-  
-  <template>
-  	<SwitchIcon>
-  		<template #dark>
-  			<WorkspacePremiumOutlined />
-  		</template>
-  		<template #light>
-  			<WorkspacePremiumTwotone />
-  		</template>
-  	</SwitchIcon>
-  </template>
-  ```
-
-  
-
-
 
 <br />
 <br />
