@@ -126,6 +126,66 @@ export default defineConfig({
 <br />
 <br />
 
+# 扩展 -自定义
+
+- 支持自定义switch切换图标插槽
+
+  ```html
+  <script>
+  	import { Switch } from 'vue-dark-switch'
+      import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
+      import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
+  </script>
+  
+  <template>
+    <Switch>
+  	<template #dark>
+  		<WorkspacePremiumOutlined />
+  	</template>
+  	<template #light>
+  		<WorkspacePremiumTwotone />
+  	</template>
+    </Switch>
+  </template>
+  ```
+
+- 支持自定义switch背景
+
+  ```html
+  <template>
+  <Switch darkBackground="#fff" lightBackground="#2D2D2D"/>
+  </template>
+  ```
+
+- 自定义`SwitchIcon`图标
+
+  ```html
+  <script>
+  	import { SwitchIcon } from 'vue-dark-switch'
+  	import 'vue-dark-switch/dist/style.css'
+      import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
+      import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
+  </script>
+  
+  <template>
+  	<SwitchIcon>
+  		<template #dark>
+  			<WorkspacePremiumOutlined />
+  		</template>
+  		<template #light>
+  			<WorkspacePremiumTwotone />
+  		</template>
+  	</SwitchIcon>
+  </template>
+  ```
+
+  
+
+
+
+<br />
+<br />
+
 # Refs
 
 该组件由以下库搭建而成

@@ -9,10 +9,14 @@ const props = withDefaults(
 	defineProps<{
 		round?: boolean
 		unmountPersets?: boolean
+		darkBackground?: string
+		lightBackground?: string
 	}>(),
 	{
 		round: false,
-		unmountPersets: false
+		unmountPersets: false,
+		darkBackground: 'linear-gradient(135deg,#42e695,#3bb2b8)',
+		lightBackground: ''
 	}
 )
 
@@ -23,25 +27,26 @@ if (!props.unmountPersets) {
 const railStyle = ({ checked }) => {
 	return {
 		background: checked
-			? 'linear-gradient(135deg,#42e695,#3bb2b8)'
-			: ''
+			? props.darkBackground
+			: props.lightBackground
 	}
 }
 </script>
 
 <template>
-	<n-switch
-		:round="round"
-		:rail-style="railStyle"
-		v-model:value="isDark">
+	<n-switch :round="round" :rail-style="railStyle" v-model:value="isDark">
 		<template #checked-icon>
-			<n-icon>
-				<DarkModeOutlined />
+				<n-icon>
+		<slot name="dark">
+			  <DarkModeOutlined />
+     	</slot>
 			</n-icon>
 		</template>
 		<template #unchecked-icon>
 			<n-icon>
+			<slot name="light">
 				<WbSunnyOutlined />
+			</slot>
 			</n-icon>
 		</template>
 	</n-switch>
