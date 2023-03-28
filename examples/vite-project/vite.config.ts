@@ -1,7 +1,7 @@
 import { Layers } from "vite-layers";
 import { HtmlPolyfill } from "vue-dark-switch/vite";
 
-// https://vitejs.dev/config/
+// https://github.com/markthree/vite-layers
 export default Layers({
   normalize(config) {
     delete config.build;

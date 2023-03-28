@@ -1,7 +1,7 @@
 <div align="center">
     <img width="100%" height="100%" src="./vue-dark-switch.gif" />
     <h1>vue-dark-switch</h1>
-    <p>多合一的开箱即用 vue3 暗黑模式开关组件</p>
+    <p>A versatile vue3 dark mode switch component</p>
 </div>
 
 <br />
@@ -9,31 +9,32 @@
 
 ## README 🦉
 
-[English](./README_EN.md) | Chinese
+English | [Chinese](./README.md)
 
 <br />
 <br />
 
-## 动机
+## Motivation
 
-暗黑模式开关是一个项目中常用的功能，为了减少后续新项目的工作量，所以封装了这个组件。
-
-<br />
-<br />
-
-## 特性
-
-- 美观的
-- 开箱即用的
-- 支持手动操作
-- `naive-ui` 支持
+Dark mode switch is a commonly used feature in projects. To reduce the workload
+for future projects, this component is encapsulated.
 
 <br />
 <br />
 
-## 使用
+## Features
 
-### 安装
+- Beautiful
+- Ready to use
+- Supports manual operation
+- naive-ui support
+
+<br />
+<br />
+
+## Usage
+
+### Installation
 
 ```shell
 npm i vue-dark-switch
@@ -41,7 +42,7 @@ npm i vue-dark-switch
 
 <br />
 
-### 基础
+### Basic
 
 ```html
 <script setup>
@@ -53,7 +54,7 @@ import { Switch } from 'vue-dark-switch'
 </template>
 ```
 
-支持自定义 `Switch` 背景色
+Customize `Switch` background color
 
 ```html
 <template>
@@ -80,7 +81,7 @@ import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlin
 </template>
 ```
 
-#### 纯图标
+### Icon-only
 
 ```html
 <script setup>
@@ -93,7 +94,7 @@ import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlin
 </template>
 ```
 
-自定义图标
+### Customize icon
 
 ```html
 <script setup>
@@ -117,23 +118,23 @@ import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone
 
 <br />
 
-### 手动
+## Manual
 
 ```ts
 import { isDark, toggleDark } from "vue-dark-switch";
 
-isDark.value; // 是否是暗黑模式
+isDark.value; // Whether in dark mode
 
-toggleDark(false); // 取消暗黑模式
+toggleDark(false); // Turn off dark mode
 
-toggleDark(true); // 开启暗黑模式
+toggleDark(true); // Turn on dark mode
 
-toggleDark(); // 切换模式
+toggleDark(); // Switch mode
 ```
 
 <br />
 
-### `naive-ui` 支持
+## `naive-ui` support
 
 ```html
 <!-- App.vue -->
@@ -152,9 +153,9 @@ import { naiveTheme } from 'vue-dark-switch'
 
 <br />
 
-## 编译时预设 - 推荐
+## Build-time preset - Recommended
 
-避免复杂场景下首次启动白屏，性能更好
+Avoid white screen at startup in complex scenarios and improve performance
 
 ```html
 <script setup>
@@ -162,7 +163,7 @@ import { Switch } from 'vue-dark-switch'
 </script>
 
 <template>
-	<!-- unmount-persets 关闭运行时预设 -->
+	<!-- unmount-persets to turn off runtime preset -->
 	<Switch :unmount-persets="true" />
 </template>
 ```
@@ -174,17 +175,14 @@ import { HtmlPolyfill } from "vue-dark-switch/vite";
 
 export default defineConfig({
   plugins: [
-    HtmlPolyfill(), // 注入编译时预设
+    HtmlPolyfill(), // Inject build-time preset
   ],
 });
 ```
 
-<br />
-<br />
-
 # Refs
 
-该组件由以下库搭建而成
+This component is built using the following libraries:
 
 - [vite](https://cn.vitejs.dev/)
 - [naive-ui](https://www.naiveui.com/zh-CN)
@@ -196,8 +194,9 @@ export default defineConfig({
 
 # Support
 
-该组件由 [vue3-exports](https://github.com/dishait/vue3-exports) 和
-[vite-layers](https://github.com/markthree/vite-layers) 提供支持
+This component is supported by
+[vue3-exports](https://github.com/dishait/vue3-exports) and
+[vite-layers](https://github.com/markthree/vite-layers).
 
 <br />
 <br />
