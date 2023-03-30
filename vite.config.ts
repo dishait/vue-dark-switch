@@ -3,6 +3,12 @@ import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import { builtinModules } from "node:module";
 
+const warmup = import("vite-plugin-warmup").then((m) =>
+  m.warmup({
+    clientFiles: ["./src/**/*"],
+  })
+);
+
 export default defineConfig({
   build: {
     emptyOutDir: false,
@@ -24,6 +30,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    warmup,
     Vue(),
     Unocss(),
   ],
