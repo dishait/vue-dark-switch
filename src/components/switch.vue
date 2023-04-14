@@ -34,20 +34,20 @@ const railStyle = ({ checked }) => {
 </script>
 
 <template>
-	<n-switch :round="round" :rail-style="railStyle" v-model:value="isDark">
+	<NSwitch :round="round" :rail-style="railStyle" v-model:value="isDark">
 		<template #checked-icon>
-			<n-icon>
+			<NIcon>
 				<slot name="dark">
 					<DarkModeOutlined />
 				</slot>
-			</n-icon>
+			</NIcon>
 		</template>
 		<template #unchecked-icon>
-			<n-icon>
+			<NIcon>
 				<slot name="light">
 					<WbSunnyOutlined />
 				</slot>
-			</n-icon>
+			</NIcon>
 		</template>
-	</n-switch>
+	</NSwitch>
 </template>

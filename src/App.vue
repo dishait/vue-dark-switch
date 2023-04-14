@@ -8,14 +8,14 @@ import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone
 
 <template>
 	<div class="w-screen h-20vh">
-		<n-space align="center" size="large" justify="center" class="mt-20">
+		<NSpace align="center" size="large" justify="center" class="mt-20">
 			<Switch />
 			<SwitchIcon />
-		</n-space>
+		</NSpace>
 	</div>
 
 	<div class="w-screen h-20vh">
-		<n-space align="center" size="large" justify="center" class="mt-20">
+		<NSpace align="center" size="large" justify="center" class="mt-20">
 			<Switch darkBackground="#fff" lightBackground="#2D2D2D">
 				<template #dark>
 					<WorkspacePremiumOutlined />
@@ -32,6 +32,6 @@ import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone
 					<WorkspacePremiumTwotone />
 				</template>
 			</SwitchIcon>
-		</n-space>
+		</NSpace>
 	</div>
 </template>
