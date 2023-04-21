@@ -33,7 +33,7 @@
     "node": ">=16",
     "pnpm": ">=7.0.0"
   },
-  "packageManager": "pnpm@8.2.0",
+  "packageManager": "pnpm@8.3.1",
   "scripts": {
     "dev": "vite",
     "build-js": "vite build",
@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "@iconify-json/line-md": "^1.1.24",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.15.13",
     "@vicons/material": "^0.12.0",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vueuse/core": "^9.13.0",
@@ -73,10 +73,10 @@
     "naive-ui": "^2.34.3",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.0",
-    "turbo": "^1.9.1",
+    "turbo": "^1.9.3",
     "typescript": "^5.0.4",
     "unocss": "^0.51.4",
-    "vite": "^4.3.0-beta.5",
+    "vite": "^4.3.1",
     "vite-layers": "^0.3.4",
     "vite-plugin-warmup": "^0.0.3",
     "vue": "^3.2.47",
