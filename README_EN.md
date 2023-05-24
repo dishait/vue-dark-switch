@@ -86,7 +86,6 @@ import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlin
 ```html
 <script setup>
 	import { SwitchIcon } from 'vue-dark-switch'
-	import 'vue-dark-switch/dist/style.css'
 </script>
 
 <template>
@@ -99,7 +98,6 @@ import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlin
 ```html
 <script setup>
 import { SwitchIcon } from 'vue-dark-switch'
-import 'vue-dark-switch/dist/style.css'
 import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
 import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
 </script>
@@ -152,33 +150,7 @@ import { naiveTheme } from 'vue-dark-switch'
 ```
 
 <br />
-
-## Build-time preset - Recommended
-
-Avoid white screen at startup in complex scenarios and improve performance
-
-```html
-<script setup>
-import { Switch } from 'vue-dark-switch'
-</script>
-
-<template>
-	<!-- unmount-persets to turn off runtime preset -->
-	<Switch :unmount-persets="true" />
-</template>
-```
-
-```ts
-// vite.config.js
-import { defineConfig } from "vite";
-import { HtmlPolyfill } from "vue-dark-switch/vite";
-
-export default defineConfig({
-  plugins: [
-    HtmlPolyfill(), // Inject build-time preset
-  ],
-});
-```
+<br />
 
 # Refs
 
