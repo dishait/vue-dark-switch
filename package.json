@@ -33,7 +33,7 @@
     "node": ">=16",
     "pnpm": ">=7.0.0"
   },
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.5.1",
   "scripts": {
     "dev": "vite",
     "build-js": "vite build",
@@ -64,23 +64,23 @@
   },
   "devDependencies": {
     "@iconify-json/line-md": "^1.1.24",
-    "@types/node": "^18.15.13",
+    "@types/node": "^18.16.14",
     "@vicons/material": "^0.12.0",
-    "@vitejs/plugin-vue": "^4.1.0",
+    "@vitejs/plugin-vue": "^4.2.3",
     "@vueuse/core": "^9.13.0",
     "bumpp": "^9.1.0",
     "fast-cpy": "^0.0.8",
-    "naive-ui": "^2.34.3",
+    "naive-ui": "^2.34.4",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^5.0.0",
-    "turbo": "^1.9.3",
+    "rimraf": "^5.0.1",
+    "turbo": "^1.9.9",
     "typescript": "^5.0.4",
-    "unocss": "^0.51.4",
-    "vite": "^4.3.1",
-    "vite-layers": "^0.3.4",
-    "vite-plugin-warmup": "^0.0.3",
-    "vue": "^3.2.47",
-    "vue-tsc": "^1.2.0"
+    "unocss": "^0.52.3",
+    "vite": "^4.3.8",
+    "vite-layers": "^0.3.5",
+    "vite-plugin-warmup": "^0.1.0",
+    "vue": "^3.3.4",
+    "vue-tsc": "^1.6.5"
   },
   "peerDependencies": {
     "vite": ">=4.0.0",
