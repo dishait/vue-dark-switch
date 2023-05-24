@@ -1,6 +1,7 @@
 import Unocss from "unocss/vite";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
+import { libInjectCss } from "vite-plugin-lib-inject-css"
 import { builtinModules } from "node:module";
 
 const warmup = import("vite-plugin-warmup").then((m) =>
@@ -19,7 +20,7 @@ export default defineConfig({
         const ext = f === "es" ? "mjs" : f;
         return `${e}.${ext}`;
       },
-      entry: ["./src/exports.ts", "./src/vite.ts"],
+      entry: ["./src/exports.ts"],
     },
     rollupOptions: {
       external: [
@@ -33,5 +34,6 @@ export default defineConfig({
     warmup,
     Vue(),
     Unocss(),
+    libInjectCss()
   ],
 });

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { NSpace } from 'naive-ui'
 import { Switch, SwitchIcon } from 'vue-dark-switch'
-import 'vue-dark-switch/dist/style.css'
 import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
 import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
 </script>
