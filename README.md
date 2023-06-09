@@ -84,7 +84,7 @@ import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlin
 
 ```html
 <script setup>
-	import 'vue-dark-switch/dist/style.css'
+	import { SwitchIcon } from "vue-dark-switch"
 </script>
 
 <template>
