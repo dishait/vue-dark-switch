@@ -54,7 +54,9 @@
   "keywords": [
     "switch",
     "dark",
-    "theme"
+    "theme",
+    "vue",
+    "nuxt"
   ],
   "license": "MIT",
   "author": {
