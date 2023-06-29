@@ -33,7 +33,7 @@
     "node": ">=16",
     "pnpm": ">=7.0.0"
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.5",
   "scripts": {
     "dev": "vite",
     "build-js": "vite build",
@@ -66,25 +66,25 @@
     "**/*.css"
   ],
   "devDependencies": {
-    "@iconify-json/line-md": "^1.1.24",
-    "@types/node": "^18.16.14",
+    "@iconify-json/line-md": "^1.1.25",
+    "@types/node": "^18.16.18",
     "@vicons/material": "^0.12.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vueuse/core": "^9.13.0",
-    "bumpp": "^9.1.0",
+    "bumpp": "^9.1.1",
     "fast-cpy": "^0.0.8",
     "naive-ui": "^2.34.4",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.1",
-    "turbo": "^1.9.9",
-    "typescript": "^5.0.4",
-    "unocss": "^0.52.3",
-    "vite": "^4.3.8",
+    "turbo": "^1.10.6",
+    "typescript": "^5.1.6",
+    "unocss": "^0.53.4",
+    "vite": "^4.3.9",
     "vite-layers": "^0.3.5",
     "vite-plugin-lib-inject-css": "^1.2.0",
     "vite-plugin-warmup": "^0.1.0",
     "vue": "^3.3.4",
-    "vue-tsc": "^1.6.5"
+    "vue-tsc": "^1.8.3"
   },
   "peerDependencies": {
     "vite": ">=4.0.0",
