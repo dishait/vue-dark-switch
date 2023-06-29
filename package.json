@@ -1,6 +1,6 @@
 {
   "name": "vue-dark-switch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "多合一的开箱即用 vue3 暗黑模式开关组件",
   "main": "./dist/exports.cjs",
   "module": "./dist/exports.mjs",
@@ -43,11 +43,9 @@
     "build:cached": "turbo build --filter=vue-dark-switch",
     "release": "bumpp --commit --push --tag && npm publish",
     "build": "rimraf -rf dist && run-p copy-polyfill build-js build-types",
-
     "example:vue:dev": "pnpm -C examples/vue run dev",
     "example:vue:build": "pnpm -C examples/vue run build",
     "example:vue:preview": "pnpm -C examples/vue run preview",
-
     "example:nuxt:dev": "pnpm -C examples/nuxt run dev",
     "example:nuxt:build": "pnpm -C examples/vue run build",
     "example:nuxt:preview": "pnpm -C examples/vue run preview"
