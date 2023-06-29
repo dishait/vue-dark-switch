@@ -31,10 +31,10 @@ jobs:
         run: pnpm run build
 
       - name: Build Example
-        run: pnpm run play:build
+        run: pnpm run example:vue:build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.6
         with:
           BRANCH: gh-pages
-          FOLDER: examples/vite-project/dist
+          FOLDER: examples/vue/dist

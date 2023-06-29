@@ -5,7 +5,9 @@ export default Layers({
   normalize(config) {
     delete config.build;
     // @ts-ignore
-    config.plugins = config.plugins.filter((p) => p.name !== "vite:lib-inject-css");
+    config.plugins = config.plugins.filter((p) =>
+      p.name !== "vite:lib-inject-css"
+    );
     return config;
   },
   extends: ["../../"],

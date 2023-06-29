@@ -1,3 +1,5 @@
 dist
+.nuxt
 .turbo
+.output
 node_modules

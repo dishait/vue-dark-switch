@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "prepare": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@unocss/nuxt": "^0.53.4",
+    "nuxt": "^3.6.1",
+    "vue-dark-switch": "workspace:*"
+  }
+}

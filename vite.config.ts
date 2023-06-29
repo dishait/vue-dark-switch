@@ -1,7 +1,7 @@
 import Unocss from "unocss/vite";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
-import { libInjectCss } from "vite-plugin-lib-inject-css"
+import { libInjectCss } from "vite-plugin-lib-inject-css";
 import { builtinModules } from "node:module";
 
 const warmup = import("vite-plugin-warmup").then((m) =>
@@ -34,6 +34,6 @@ export default defineConfig({
     warmup,
     Vue(),
     Unocss(),
-    libInjectCss()
+    libInjectCss(),
   ],
 });

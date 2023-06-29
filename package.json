@@ -39,13 +39,18 @@
     "build-js": "vite build",
     "prepublishOnly": "pnpm build:cached",
     "build-types": "vue-tsc -p tsconfig.build.json",
-    "play": "pnpm -C examples/vite-project run dev",
     "copy-polyfill": "fast-cpy src/polyfill dist/polyfill",
     "build:cached": "turbo build --filter=vue-dark-switch",
     "release": "bumpp --commit --push --tag && npm publish",
-    "play:build": "pnpm -C examples/vite-project run build",
-    "play:preview": "pnpm -C examples/vite-project run preview",
-    "build": "rimraf -rf dist && run-p copy-polyfill build-js build-types"
+    "build": "rimraf -rf dist && run-p copy-polyfill build-js build-types",
+
+    "example:vue:dev": "pnpm -C examples/vue run dev",
+    "example:vue:build": "pnpm -C examples/vue run build",
+    "example:vue:preview": "pnpm -C examples/vue run preview",
+
+    "example:nuxt:dev": "pnpm -C examples/nuxt run dev",
+    "example:nuxt:build": "pnpm -C examples/vue run build",
+    "example:nuxt:preview": "pnpm -C examples/vue run preview"
   },
   "repository": {
     "type": "git",

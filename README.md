@@ -115,6 +115,24 @@ import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone
 
 <br />
 
+### nuxt
+
+```html
+<script setup lang="ts">
+import { Switch } from "vue-dark-switch"
+</script>
+
+<template>
+    <div>
+        <ClientOnly>
+            <Switch />
+        </ClientOnly>
+    </div>
+</template>
+```
+
+<br />
+
 ### 手动
 
 ```ts
