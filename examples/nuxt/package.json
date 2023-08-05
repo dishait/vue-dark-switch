@@ -8,8 +8,8 @@
     "prepare": "nuxt prepare"
   },
   "devDependencies": {
-    "@unocss/nuxt": "^0.53.4",
-    "nuxt": "^3.6.1",
+    "@unocss/nuxt": "^0.54.1",
+    "nuxt": "^3.6.5",
     "vue-dark-switch": "workspace:*"
   }
 }
