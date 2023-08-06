@@ -74,7 +74,7 @@
     "@types/node": "^18.17.3",
     "@vicons/material": "^0.12.0",
     "@vitejs/plugin-vue": "^4.2.3",
-    "@vueuse/core": "^10.3.0",
+    "@vueuse/core": "^9.13.0",
     "bumpp": "^9.1.1",
     "fast-cpy": "^0.0.8",
     "naive-ui": "^2.34.4",
