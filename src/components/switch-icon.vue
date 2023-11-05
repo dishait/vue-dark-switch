@@ -4,13 +4,9 @@ import { isDark, toggleDark } from '../composables/theme'
 import WbSunnyOutlined from '@vicons/material/es/WbSunnyOutlined'
 import DarkModeOutlined from '@vicons/material/es/DarkModeOutlined'
 
-const props = withDefaults(
-	defineProps<{
-		size?: string
-	}>(),
-	{
-		size: '20px',
-	}
+withDefaults(
+	defineProps<{ size?: string }>(),
+	{ size: '20px' }
 )
 </script>
 
