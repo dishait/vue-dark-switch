@@ -45,11 +45,11 @@ npm i vue-dark-switch
 
 ```html
 <script setup>
-import { Switch } from 'vue-dark-switch'
+  import { Switch } from "vue-dark-switch"
 </script>
 
 <template>
-	<Switch />
+  <Switch />
 </template>
 ```
 
@@ -57,26 +57,26 @@ import { Switch } from 'vue-dark-switch'
 
 ```html
 <template>
-	<Switch darkBackground="#fff" lightBackground="#2D2D2D"/>
+  <Switch darkBackground="#fff" lightBackground="#2D2D2D" />
 </template>
 ```
 
 ```html
 <script setup>
-import { Switch } from 'vue-dark-switch'
-import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
-import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
+  import { Switch } from "vue-dark-switch"
+  import WorkspacePremiumTwotone from "@vicons/material/es/WorkspacePremiumTwotone"
+  import WorkspacePremiumOutlined from "@vicons/material/es/WorkspacePremiumOutlined"
 </script>
 
 <template>
-	<Switch>
-		<template #dark>
-			<WorkspacePremiumOutlined />
-		</template>
-		<template #light>
-			<WorkspacePremiumTwotone />
-		</template>
-	</Switch>
+  <Switch>
+    <template #dark>
+      <WorkspacePremiumOutlined />
+    </template>
+    <template #light>
+      <WorkspacePremiumTwotone />
+    </template>
+  </Switch>
 </template>
 ```
 
@@ -84,11 +84,11 @@ import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlin
 
 ```html
 <script setup>
-	import { SwitchIcon } from "vue-dark-switch"
+  import { SwitchIcon } from "vue-dark-switch"
 </script>
 
 <template>
-	<SwitchIcon />
+  <SwitchIcon />
 </template>
 ```
 
@@ -96,20 +96,20 @@ import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlin
 
 ```html
 <script setup>
-import { SwitchIcon } from 'vue-dark-switch'
-import WorkspacePremiumOutlined from '@vicons/material/es/WorkspacePremiumOutlined'
-import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone'
+  import { SwitchIcon } from "vue-dark-switch"
+  import WorkspacePremiumOutlined from "@vicons/material/es/WorkspacePremiumOutlined"
+  import WorkspacePremiumTwotone from "@vicons/material/es/WorkspacePremiumTwotone"
 </script>
 
 <template>
-	<SwitchIcon>
-		<template #dark>
-			<WorkspacePremiumOutlined />
-		</template>
-		<template #light>
-			<WorkspacePremiumTwotone />
-		</template>
-	</SwitchIcon>
+  <SwitchIcon>
+    <template #dark>
+      <WorkspacePremiumOutlined />
+    </template>
+    <template #light>
+      <WorkspacePremiumTwotone />
+    </template>
+  </SwitchIcon>
 </template>
 ```
 
@@ -117,17 +117,26 @@ import WorkspacePremiumTwotone from '@vicons/material/es/WorkspacePremiumTwotone
 
 ### nuxt
 
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  build: {
+    transpile: ["vue-dark-switch"],
+  },
+})
+```
+
 ```html
 <script setup lang="ts">
-import { Switch } from "vue-dark-switch"
+  import { Switch } from "vue-dark-switch"
 </script>
 
 <template>
-    <div>
-        <ClientOnly>
-            <Switch />
-        </ClientOnly>
-    </div>
+  <div>
+    <ClientOnly>
+      <Switch />
+    </ClientOnly>
+  </div>
 </template>
 ```
 
@@ -136,15 +145,15 @@ import { Switch } from "vue-dark-switch"
 ### 手动
 
 ```ts
-import { isDark, toggleDark } from "vue-dark-switch";
+import { isDark, toggleDark } from "vue-dark-switch"
 
-isDark.value; // 是否是暗黑模式
+isDark.value // 是否是暗黑模式
 
-toggleDark(false); // 取消暗黑模式
+toggleDark(false) // 取消暗黑模式
 
-toggleDark(true); // 开启暗黑模式
+toggleDark(true) // 开启暗黑模式
 
-toggleDark(); // 切换模式
+toggleDark() // 切换模式
 ```
 
 <br />
@@ -154,15 +163,15 @@ toggleDark(); // 切换模式
 ```html
 <!-- App.vue -->
 <script setup>
-import { NConfigProvider } from 'naive-ui'
+  import { NConfigProvider } from "naive-ui"
 
-import { naiveTheme } from 'vue-dark-switch'
+  import { naiveTheme } from "vue-dark-switch"
 </script>
 
 <template>
-	<n-config-provider :theme="naiveTheme">
-		<router-view />
-	</n-config-provider>
+  <n-config-provider :theme="naiveTheme">
+    <router-view />
+  </n-config-provider>
 </template>
 ```
 
